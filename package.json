@@ -1,0 +1,27 @@
+{
+    "name": "re-parse",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "tablecloth-bucklescript": "^0.0.7"
+    },
+    "devDependencies": {
+        "@glennsl/bs-jest": "0.5.1",
+        "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+        "bs-platform": "^7.3.2",
+        "jest": "26.1.0"
+    },
+    "peerDependencies": {
+
+    },
+    "scripts": {
+        "build": "bsb -make-world",
+        "clean": "bsb -clean-world",
+        "test": "jest"
+    },
+    "jest": {
+        "transformIgnorePatterns": [
+            "/node_modules/(?!@glennsl/bs-jest|bs-platform|tablecloth-bucklescript).+\\.js$"
+        ]
+    }
+}
